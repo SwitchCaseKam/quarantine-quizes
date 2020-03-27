@@ -1,1 +1,3 @@
-<p>driver-input works!</p>
+<input #driverOneInputBox id={{id}}driverOneInputBox type="text" class="form-control" placeholder="Please insert driver ..." (input)="checkAnswer(driverOneInputBox.value, id + 'driverOneInputBox')"><br>
+<input #driverTwoInputBox id={{id}}driverTwoInputBox type="text" class="form-control" placeholder="Please insert driver ..." (input)="checkAnswer(driverTwoInputBox.value, id + 'driverTwoInputBox')">
+

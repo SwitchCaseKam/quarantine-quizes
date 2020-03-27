@@ -10,7 +10,7 @@ import { MatStepper } from '@angular/material';
   templateUrl: './f1-guess-tracks.component.html',
   styleUrls: ['./f1-guess-tracks.component.css']
 })
-export class F1GuessTracksComponent implements OnInit, OnDestroy, AfterViewInit {
+export class F1GuessTracksComponent implements OnInit, OnDestroy {
   @ViewChild('stepper', { static: false }) stepper: MatStepper;
 
   @Output()
@@ -30,14 +30,14 @@ export class F1GuessTracksComponent implements OnInit, OnDestroy, AfterViewInit 
     private guessTracksService: F1GuessTracksService,
     private commonQuizService: CommonQuizService) { }
 
-  ngAfterViewInit() {
-      this.stepper.selectedIndex = 1;
-  }
+//   ngAfterViewInit() {
+//       this.stepper.selectedIndex = 1;
+//   }
 
-  changeStep(index: number) {
-    console.log(index);
-    this.stepper.selectedIndex = index;
-}
+//   changeStep(index: number) {
+//     console.log(index);
+//     this.stepper.selectedIndex = index;
+// }
 
   public ngOnInit() {
     console.log('ngOnInit: f1 guess tracks');
