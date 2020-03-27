@@ -1,0 +1,17 @@
+.text-placeholder {
+  display: inline-block;
+  padding-right: 2rem;
+}
+
+.picture-placeholder {
+  width: 200px;
+  height: 200px;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.card-img {
+  padding: 10px;
+}

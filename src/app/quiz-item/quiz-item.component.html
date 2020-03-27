@@ -1,0 +1,22 @@
+<div class="card text-center">
+  <div class="card-header">
+    {{quizCategory}}
+  </div>
+
+  <div class="card-body">
+    <h5 class="card-title">{{quizName}}</h5>
+    <!-- <img class="card-img" src="https://live.staticflickr.com/5258/5586349470_bcf8495662_b.jpg"
+    height="300px" weigth="100px"> -->
+    <ng-content></ng-content>
+    <div class='text-placeholder'>
+      <p class="card-text">{{quizDescription}}</p>
+      <a href='quizes/{{quizPath}}' class="btn btn-success">Go to quiz</a>
+    </div>
+    <!-- <div class='picture-placeholder'>
+      <img src="https://live.staticflickr.com/5258/5586349470_bcf8495662_b.jpg">
+    </div> -->
+  </div>
+  <div class="card-footer text-muted">
+    Date: {{date}}
+  </div>
+</div>

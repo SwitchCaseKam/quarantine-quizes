@@ -1,0 +1,25 @@
+<div class='container'>
+  <ng-container *ngIf='!userName'>
+  <app-start-quiz quizCategory='Formula 1' quizName='Guess drivers. Season 2019'>
+    <img src='https://statics.sportskeeda.com/editor/2019/04/0342d-15551710355674-500.jpg'>
+    <br><br>
+    <h4><b>Complete drivers of all teams in season 2019!</b></h4>
+  </app-start-quiz>
+  <br>
+</ng-container>
+
+<ng-container *ngIf='userName'>
+  <app-teams-drivers-table [teams]="['Renault F1 Team', 'McLaren F1 Team',
+                                    'Scuderia Ferrari', 'Alfa Romeo Racing',
+                                    'Haas F1 Team', 'Red Bull Toro Rosso Honda',
+                                    'Aston Martin Red Bull Racing', 'SportPesa Racing Point F1 Team',
+                                    'Mercedes-AMG Petronas Motorsport', 'ROKiT Williams Racing']">
+  </app-teams-drivers-table>
+  <div class='buttons'>
+    <button mat-button class="btn btn-success mr-2">Give up?</button>
+    <button mat-button class="btn btn-secondary mr-2"(click)="reset()">Reset</button>
+  </div>
+</ng-container>
+<br>
+<br>
+</div>

@@ -1,0 +1,29 @@
+<div class="card text-center">
+  <div class="card-header">
+    Question {{questionIndex}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">What is that track?</h5>
+    <br>
+    <img src='{{questionImg}}'><br><br>
+    <div class='text-placeholder'>
+      <p class="card-text">
+        <select class="browser-default custom-select" (change)="onChange($event.target.value)">
+          <option selected> Choose one of the Grand Prixes from list</option>
+          <ng-container *ngFor='let answer of answerList'>
+            <option>{{answer}}</option>
+          </ng-container>
+        </select>
+        <!-- <br><b>Your anwser: {{correctAnswer}}</b> -->
+      </p>
+      <div class="form-group">
+
+      </div>
+      <div class='btn-group'>
+        <!-- <button mat-button matStepperPrevious class="btn btn-secondary mr-2">Back</button> -->
+        <button mat-button matStepperNext class="btn btn-success" (click)='checkAnswer()'>Next</button>
+        <br>{{result}}
+      </div>
+    </div>
+  </div>
+</div>

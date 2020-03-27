@@ -1,0 +1,23 @@
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-form-field {
+  margin-top: 16px;
+}
+
+.questions-stepper-background {
+  background-color: azure;
+}
+
+::ng-deep .mat-horizontal-stepper-header{
+  pointer-events: none !important;
+}
+
+::ng-deep .mat-step-header .mat-step-icon-selected {
+  background-color: green;
+}
+
+::ng-deep .mat-step-header .mat-step-icon {
+  background-color: #54635e;
+}

@@ -1,0 +1,22 @@
+<div class='questions-stepper-background'>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th style="background: #343A40; font-family: Calibri" scope="col">Track</th>
+        <th style="background: #343A40; font-family: Calibri" scope="col">Your answer</th>
+        <th style="background: #343A40; font-family: Calibri" scope="col">Correct answer</th>
+        <th style="background: #343A40; font-family: Calibri" scope="col">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let track of tracksNamesAnswer; let i=index">
+        <th style="font-family: Calibri" scope="row"><img src='{{tracksAnswer.get(track).imgSrc}}'></th>
+        <td style="font-family: Calibri" >{{ userAnswers[i] }}</td>
+        <td style="font-family: Calibri" >{{ tracksAnswer.get(track).fullName }}</td>
+
+        <td style="font-family: Calibri" >X</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

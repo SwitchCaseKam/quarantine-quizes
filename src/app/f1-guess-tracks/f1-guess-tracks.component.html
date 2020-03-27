@@ -1,0 +1,46 @@
+<div class='container'>
+  <ng-container *ngIf='!userName'>
+  <app-start-quiz quizCategory='Formula 1' quizName='Guess tracks. Season 2019'>
+
+    <img src='https://static.planetminecraft.com/files/resource_media/screenshot/1220/f1-tracks_2261823.jpg'>
+    <br><br>
+    <h4><b>Quiz contains 21 questions includes all tracks of season 2019.</b></h4>
+  </app-start-quiz>
+  <br>
+</ng-container>
+
+
+
+
+  <div class='questions-stepper-background'>
+    <ng-container *ngIf='userName'>
+    <mat-horizontal-stepper [linear]="isLinear" #stepper>
+      <div class='questions' *ngFor="let track of tracksNames; let i = index">
+        <mat-step>
+          <ng-template matStepLabel></ng-template>
+          <app-quiz-question
+            questionIndex={{i+1}}
+            correctAnswer={{tracks.get(track).fullName}}
+            questionImg='{{tracks.get(track).imgSrc}}'>
+          </app-quiz-question><br>
+        </mat-step>
+      </div>
+
+      <mat-step>
+        <ng-template matStepLabel></ng-template>
+          <p>You are now done.<br></p>
+          <p>Your points: <b>{{score}}/21</b></p>
+          <div>
+            <button mat-button class="btn btn-success mr-2">Finish. Back to other quizes</button>
+            <button mat-button class="btn btn-secondary mr-2"(click)="reset();stepper.reset()">Again</button>
+            <!-- <button mat-button class="btn btn-secondary ">Show correct answers</button> -->
+          </div>
+          <br>
+          <app-quiz-answers tracksAnswer={{tracks}} tracksNamesAnswer={{[tracksNames]}}></app-quiz-answers>
+        </mat-step>
+    </mat-horizontal-stepper>
+  </ng-container>
+  </div>
+  <br>
+
+</div>
